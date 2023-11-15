@@ -11,9 +11,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </BrowserRouter>
   </React.StrictMode>,
 )
-
-const Circle = () => {
-  return <div className="circle"></div>;
-};
-
-export default Circle;

@@ -1,8 +1,17 @@
+body {
+  background-color: #e8dff5;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
 .navbar {
   width: 1057px;
-height: 56px;
-border-radius: 50px;
-background: #FCE1E4;
+  height: 56px;
+  border-radius: 50px;
+  background: #fce1e4;
   position: fixed;
   top: 20px;
   left: 350px;
@@ -34,11 +43,11 @@ background: #FCE1E4;
 
 .navbar a {
   color: #232323;
-font-family: Capriola;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Capriola;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 a {
@@ -50,37 +59,68 @@ a:hover {
   color: #000000;
 }
 
-body {
-  background-color: #E8DFF5;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
-  font-size: 3.2em;
   line-height: 1.1;
+  color: #232323;
+  font-family: Capriola;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.bigBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  background-color: #747bff;
 }
-button:hover {
-  border-color: #646cff;
+
+.MyServices {
+  background-color: pink;
+  width: 80vw;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+section {
+  border-radius: 189.5px;
+  background: #fce1e4;
+  padding: 10px;
+  margin: 30px;
+  width: 346px;
+  height: 346px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:hover {
+  opacity: 0.5;
+}
+
+section p {
+  display: none;
+  position: absolute;
+}
+
+section:hover p {
+  display: block !important;
+  opacity: 1!important;
+}
+
+section img {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  height: auto;
+  align-items: center;
 }
 
 @media (prefers-color-scheme: light) {
