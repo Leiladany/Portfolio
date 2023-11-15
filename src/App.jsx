@@ -1,10 +1,15 @@
-import './App.css'
-import Circle from './Circle'; // Import your Circle component
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import Navbar from './components/navbar';
 
 const App = () => {
   return (
     <div>
-      <Circle />
+      <Navbar/>
+
+      <Routes>
+        <Route path='/' />
+      </Routes>
     </div>
   );
 };
