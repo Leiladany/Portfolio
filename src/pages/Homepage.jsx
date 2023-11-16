@@ -25,7 +25,7 @@ const Homepage = () => {
           <h1>Projects</h1>
           <div className="button-container">
             <button>
-              <img src="/public/Images/gamepad-icon.png" alt="Web Development" />
+              <img src="/Images/gamepad-icon.png" alt="Web Development" />
               <p>Games</p>
             </button>
             <button>
