@@ -92,6 +92,24 @@ h1 {
   text-align: end;
 }
 
+.Certifications {
+  background-color: pink;
+  width: 80vw;
+}
+
+.Certifications p {
+  width: 16vw;
+}
+
+.GetinTouch {
+  background-color: pink;
+  width: 80vw;
+}
+
+.GetinTouch h1 {
+  text-align: end;
+}
+
 .button-container {
   display: flex;
   justify-content: center;
