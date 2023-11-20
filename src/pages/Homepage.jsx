@@ -1,12 +1,23 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
-  const emailAddress = 'leiladany16@gmail.com';
-  const linkedinUrl = 'https://www.linkedin.com/in/leila-teixeira';
+  const emailAddress = "leiladany16@gmail.com";
+  const linkedinUrl = "https://www.linkedin.com/in/leila-teixeira";
 
   const certifications = [
-    { name: 'Lisbon School of Design', image: '/Images/LSD.png', alt: 'LSD', modalImage: '/Images/LSDCert.png' },
-    { name: 'Ironhack', image: '/Images/ironhackicon.png', alt: 'Ironhack', modalImage: '/Images/ironhackCert.png' },
+    {
+      name: "Lisbon School of Design",
+      image: "/Images/LSD.png",
+      alt: "LSD",
+      modalImage: "/Images/LSDCert.png",
+    },
+    {
+      name: "Ironhack",
+      image: "/Images/ironhackicon.png",
+      alt: "Ironhack",
+      modalImage: "/Images/ironhackCert.png",
+    },
   ];
 
   const [showModal, setShowModal] = useState(false);
@@ -22,7 +33,9 @@ const Homepage = () => {
   };
 
   const switchCertificationImage = () => {
-    setSelectedCertification((prevIndex) => (prevIndex + 1) % certifications.length);
+    setSelectedCertification(
+      (prevIndex) => (prevIndex + 1) % certifications.length
+    );
   };
 
   return (
@@ -47,23 +60,29 @@ const Homepage = () => {
         </div>
       </div>
       <div className="bigBox">
-        <div className="Projects">
-          <h1>Projects</h1>
-          <div className="button-container">
-            <button>
-              <img src="/Images/gameicon.png" alt="Games" />
-              <p>Games</p>
-            </button>
-            <button>
-              <img src="/Images/onagnicon.png" alt="Online Agenda" />
-              <p>Online Agenda</p>
-            </button>
-            <button>
-              <img src="/Images/blogicon.png" alt="Blog" />
-              <p>Blog</p>
-            </button>
-          </div>
-        </div>
+      <div className="Projects">
+  <h1>Projects</h1>
+  <div className="button-container">
+    <button>
+      <Link to="/games" className="button-projects">
+          <img src="/Images/gameicon.png" alt="Games" />
+        <p>Games</p>
+      </Link>
+    </button>
+    <button>
+      <Link to="/games">
+          <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
+        <p>Games</p>
+      </Link>
+    </button>
+    <button>
+      <Link to="/games">
+          <img src="/Images/blogicon.png" alt="Blog" />
+        <p>Games</p>
+      </Link>
+    </button>
+  </div>
+</div>
       </div>
       <div className="bigBox">
         <div className="Certifications">
@@ -93,13 +112,15 @@ const Homepage = () => {
               alt={certifications[selectedCertification].alt}
             />
             {/* Switch image button */}
-            <button className="switch-button" onClick={switchCertificationImage}>
+            <button
+              className="switch-button"
+              onClick={switchCertificationImage}
+            >
               Switch Image
             </button>
           </div>
         </div>
       )}
-
 
       <div className="bigBox">
         <div className="GetinTouch">

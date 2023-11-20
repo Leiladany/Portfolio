@@ -106,9 +106,9 @@ h1 {
   width: 80vw;
 }
 
-.GetinTouch h1 {
-  text-align: end;
-}
+/* .button-projects {
+  display: contents;
+} */
 
 .button-container {
   display: flex;
