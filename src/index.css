@@ -16,6 +16,8 @@ body {
   top: 20px;
   left: 350px;
   align-items: center;
+  z-index: 1;
+  border: 6px double #000;
 }
 
 .navbar-container {
@@ -106,10 +108,6 @@ h1 {
   width: 80vw;
 }
 
-/* .button-projects {
-  display: contents;
-} */
-
 .button-container {
   display: flex;
   justify-content: center;
@@ -141,7 +139,6 @@ section p {
 
 section:hover p {
   display: block !important;
-  opacity: 1!important;
 }
 
 section img {
@@ -192,6 +189,30 @@ button img {
   width: 50%;
   height: auto;
   align-items: center;
+}
+
+.button-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  border-radius: 38%; /* Make it round */
+}
+
+.button-getintouch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  border-radius: 38%; /* Make it round */
+}
+
+.button-getintouch:hover {
+  opacity: 0.5;
 }
 
 @media (prefers-color-scheme: light) {

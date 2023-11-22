@@ -63,24 +63,24 @@ const Homepage = () => {
       <div className="Projects">
   <h1>Projects</h1>
   <div className="button-container">
-    <button>
-      <Link to="/games" className="button-projects">
-          <img src="/Images/gameicon.png" alt="Games" />
-        <p>Games</p>
-      </Link>
-    </button>
-    <button>
-      <Link to="/games">
-          <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
-        <p>Games</p>
-      </Link>
-    </button>
-    <button>
-      <Link to="/games">
-          <img src="/Images/blogicon.png" alt="Blog" />
-        <p>Games</p>
-      </Link>
-    </button>
+  <button>
+  <Link to="/games" className="button-projects">
+    <img src="/Images/gameicon.png" alt="Games" />
+    <p>Games</p>
+  </Link>
+</button>
+<button>
+  <Link to="/games" className="button-projects">
+    <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
+    <p>Online Agenda</p>
+  </Link>
+</button>
+<button>
+  <Link to="/games" className="button-projects">
+    <img src="/Images/blogicon.png" alt="Blog" />
+    <p>Blog</p>
+  </Link>
+</button>
   </div>
 </div>
       </div>
@@ -126,18 +126,20 @@ const Homepage = () => {
         <div className="GetinTouch">
           <h1>Get in Touch</h1>
           <div className="button-container">
-            <a href={`mailto:${emailAddress}`}>
-              <button>
+          <button>
+            <a href={`mailto:${emailAddress}`} className="button-getintouch">
+              
                 <img src="/Images/emailicon.png" alt="Email" />
                 <p>Email</p>
-              </button>
             </a>
-            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
-              <button>
+            </button>
+            <button>
+            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="button-getintouch">
+              
                 <img src="/Images/linkedinicon.png" alt="Linkedin" />
                 <p>LinkedIn</p>
-              </button>
             </a>
+            </button>
           </div>
         </div>
       </div>
