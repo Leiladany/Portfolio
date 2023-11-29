@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+
 
 const Homepage = () => {
   const emailAddress = "leiladany16@gmail.com";
@@ -41,7 +42,7 @@ const Homepage = () => {
   return (
     <div>
       <div className="bigBox">
-        <div className="MyServices">
+        <div className="MyServices" id="my-services-section">
           <h1>My Services</h1>
           <div className="button-container">
             <section>
@@ -60,32 +61,53 @@ const Homepage = () => {
         </div>
       </div>
       <div className="bigBox">
-      <div className="Projects">
+      <div className="Projects" id="projects-section">
   <h1>Projects</h1>
   <div className="button-container">
-  <button>
-  <Link to="/games" className="button-projects">
-    <img src="/Images/gameicon.png" alt="Games" />
-    <p>Games</p>
-  </Link>
-</button>
-<button>
-  <Link to="/games" className="button-projects">
-    <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
-    <p>Online Agenda</p>
-  </Link>
-</button>
-<button>
-  <Link to="/games" className="button-projects">
-    <img src="/Images/blogicon.png" alt="Blog" />
-    <p>Blog</p>
-  </Link>
-</button>
+    <button className="hover-button">
+      <ScrollLink
+        to="games-section"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        className="button-projects"
+      >
+        <img src="/Images/gameicon.png" alt="Games" />
+        <p>Games</p>
+      </ScrollLink>
+    </button>
+    <button>
+      <ScrollLink
+        to="online-agenda-section"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        className="button-projects"
+      >
+        <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
+        <p>Online Agenda</p>
+      </ScrollLink>
+    </button>
+    <button>
+      <ScrollLink
+        to="blog-section"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        className="button-projects"
+      >
+        <img src="/Images/blogicon.png" alt="Blog" />
+        <p>Blog</p>
+      </ScrollLink>
+    </button>
   </div>
 </div>
       </div>
       <div className="bigBox">
-        <div className="Certifications">
+        <div className="Certifications" id="certifications-section">
           <h1>Certifications</h1>
           <div className="button-container">
             {certifications.map((certification, index) => (
@@ -123,7 +145,7 @@ const Homepage = () => {
       )}
 
       <div className="bigBox">
-        <div className="GetinTouch">
+        <div className="GetinTouch" id="get-in-touch-section">
           <h1>Get in Touch</h1>
           <div className="button-container">
           <button>

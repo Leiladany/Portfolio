@@ -1,41 +1,58 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
-  
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
-
-        <div className={`nav-menu`}>
+        <div className="nav-menu">
           <i className="fas fa-bars"></i>
         </div>
 
-        <ul className={`nav-menu`}>
+        <ul className="nav-menu">
           <li className="nav-item">
-            <Link to="/homepage" className="nav-links" >
+            <ScrollLink
+              to="my-services-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               Home
-            </Link>
+            </ScrollLink>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-links" >
+            <ScrollLink
+              to="projects-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               Projects
-            </Link>
+            </ScrollLink>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className="nav-links" >
+            <ScrollLink
+              to="certifications-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               Certifications
-            </Link>
+            </ScrollLink>
           </li>
           <li className="nav-item">
-            <Link to="/" className="nav-links" >
-              About Me
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/" className="nav-links" >
+            <ScrollLink
+              to="get-in-touch-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               Get In Touch
-            </Link>
+            </ScrollLink>
           </li>
         </ul>
       </div>
