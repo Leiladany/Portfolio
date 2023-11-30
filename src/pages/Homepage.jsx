@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { Link } from "react-router-dom";
+
 
 
 const Homepage = () => {
@@ -62,47 +63,26 @@ const Homepage = () => {
       </div>
       <div className="bigBox">
       <div className="Projects" id="projects-section">
-  <h1>Projects</h1>
+      <h1>Projects</h1>
   <div className="button-container">
-    <button className="hover-button">
-      <ScrollLink
-        to="games-section"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        className="button-projects"
-      >
-        <img src="/Images/gameicon.png" alt="Games" />
-        <p>Games</p>
-      </ScrollLink>
-    </button>
-    <button>
-      <ScrollLink
-        to="online-agenda-section"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        className="button-projects"
-      >
-        <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
-        <p>Online Agenda</p>
-      </ScrollLink>
-    </button>
-    <button>
-      <ScrollLink
-        to="blog-section"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        className="button-projects"
-      >
-        <img src="/Images/blogicon.png" alt="Blog" />
-        <p>Blog</p>
-      </ScrollLink>
-    </button>
+  <button className="hover-button">
+  <Link to="/games" className="button-projects">
+    <img src="/Images/gameicon.png" alt="Games" />
+    <p>Games</p>
+  </Link>
+</button>
+<button>
+  <Link to="/games" className="button-projects">
+    <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
+    <p>Online Agenda</p>
+  </Link>
+</button>
+<button>
+  <Link to="/games" className="button-projects">
+    <img src="/Images/blogicon.png" alt="Blog" />
+    <p>Blog</p>
+  </Link>
+</button>
   </div>
 </div>
       </div>

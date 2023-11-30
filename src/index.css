@@ -35,6 +35,7 @@ body {
 
 .nav-item {
   margin-right: 100px;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -100,6 +101,11 @@ h1 {
 
 .GetinTouch {
   width: 80vw;
+  margin-bottom: 120px;
+}
+
+.GetinTouch h1 {
+  text-align: end;
 }
 
 .button-container {
@@ -128,7 +134,7 @@ section:hover {
 section p {
   display: none;
   position: absolute;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 section:hover p {
@@ -208,6 +214,37 @@ button img {
 .button-getintouch:hover {
   opacity: 0.5;
 }
+
+.close-button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button::before,
+.close-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.close-button::before {
+  left: 0;
+  transform: translateX(6px) rotate(-45deg);
+}
+
+.close-button::after {
+  left: 15px;
+  transform: translateX(-1px) rotate(45deg);
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

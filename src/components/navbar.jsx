@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
@@ -15,7 +14,7 @@ const Navbar = () => {
               to="my-services-section"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-230}
               duration={500}
             >
               Home
@@ -26,7 +25,7 @@ const Navbar = () => {
               to="projects-section"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-210}
               duration={500}
             >
               Projects
@@ -37,7 +36,7 @@ const Navbar = () => {
               to="certifications-section"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-210}
               duration={500}
             >
               Certifications
@@ -48,7 +47,7 @@ const Navbar = () => {
               to="get-in-touch-section"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-210}
               duration={500}
             >
               Get In Touch
