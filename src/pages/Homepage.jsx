@@ -34,12 +34,6 @@ const Homepage = () => {
     setShowModal(false);
   };
 
-  const switchCertificationImage = () => {
-    setSelectedCertification(
-      (prevIndex) => (prevIndex + 1) % certifications.length
-    );
-  };
-
   return (
     <div>
       <div className="bigBox">
@@ -101,28 +95,23 @@ const Homepage = () => {
       </div>
 
       {showModal && (
-        <div className="modal-overlay" onClick={closeCertification}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            {/* Close button */}
-            <button className="close-button" onClick={closeCertification}>
-              &times;
-            </button>
-            {/* Certification content */}
-            <h2>{certifications[selectedCertification].name}</h2>
-            <img
-              src={certifications[selectedCertification].modalImage}
-              alt={certifications[selectedCertification].alt}
-            />
-            {/* Switch image button */}
-            <button
-              className="switch-button"
-              onClick={switchCertificationImage}
-            >
-              Switch Image
-            </button>
-          </div>
-        </div>
-      )}
+  <div className="modal-overlay" onClick={(e) => e.target.classList.contains("close-button") && closeCertification()}>
+    <div className="modal">
+      {/* Close button */}
+      <button className="close-button" onClick={(e) => e.stopPropagation() || closeCertification()}>
+        &times;
+      </button>
+      {/* Certification content */}
+      <div className="certification-content">
+        <h2>{certifications[selectedCertification].name}</h2>
+        <img
+          src={certifications[selectedCertification].modalImage}
+          alt={certifications[selectedCertification].alt}
+        />
+      </div>
+    </div>
+  </div>
+)}
 
       <div className="bigBox">
         <div className="GetinTouch" id="get-in-touch-section">
