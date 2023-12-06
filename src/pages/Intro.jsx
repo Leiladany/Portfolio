@@ -17,9 +17,20 @@ const Intro = () => {
 
   return (
     <div className="intro">
-      <h1>✨Hellooo Everyone! I'm Leila Teixeira✨</h1>
-      <h2>Diving into the digital realm is my thing! With a knack for crafting experiences, I've poured my creativity into UX/UI design, ensuring users feel understood and appreciated when navigating the digital world. But wait, there's more! Not only do I design these experiences, I bring them to life as a Web Developer. Pixels, codes, designs, or animations, you name it, I've played with it. So, whether you're looking for a sleek design, efficient code, or just want to geek out about the latest web trends, I'm your go-to person. </h2>
-      <button onClick={handleClick}>Let's create something awesome together! 💫</button>
+      <h1>✨Hellooo Everyone! My name is Leila Teixeira✨</h1>
+      <h2>
+        Diving into the digital realm is my thing! With a knack for crafting
+        experiences, I have poured my creativity into UX/UI design, ensuring
+        users feel understood and appreciated when navigating the digital world.
+        But wait, there is more! Not only do I design these experiences, I bring
+        them to life as a Web Developer. Pixels, codes, designs, or animations,
+        you name it, I have played with it. So, whether you are looking for a
+        sleek design, efficient code, or just want to geek out about the latest
+        web trends, I am your go-to person.{" "}
+      </h2>
+      <button className="intro-button" onClick={handleClick}>
+        Lets create something awesome together! 💫
+      </button>
     </div>
   );
 };

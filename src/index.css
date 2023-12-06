@@ -7,6 +7,12 @@ body {
   min-height: 100vh;
 }
 
+/* Navbar */
+
+body.hide-navbar .navbar {
+  display: none;
+}
+
 .navbar {
   width: 1057px;
   height: 56px;
@@ -161,6 +167,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 button:hover {
@@ -180,7 +187,7 @@ button p {
 
 button:hover p {
   display: block !important;
-  opacity: 1!important;
+  opacity: 1 !important;
 }
 
 button img {
@@ -220,7 +227,7 @@ button img {
   height: 3px;
   position: absolute;
   top: 17px;
-    right: 15px;
+  right: 15px;
   font-size: 20px;
   background: none;
   border: none;
@@ -264,17 +271,15 @@ button img {
   border-radius: 10px;
 }
 
-body.hide-navbar .navbar {
-  display: none;
-}
-
 .intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  left: 185%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center the .intro horizontally */
   text-align: center; /* Optional: Center align text within .intro */
   height: 100vh; /* Set the height of the container to the full viewport height */
 }
@@ -283,6 +288,15 @@ body.hide-navbar .navbar {
   margin-bottom: 20px; /* Optional: Add some spacing below the h1 */
 }
 
+.intro-button {
+  font-size: 15px;
+  font-family: Capriola;
+  text-align: center;
+  width: 320px;
+  height: auto;
+  border: 6px double #000;
+  cursor: pointer;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

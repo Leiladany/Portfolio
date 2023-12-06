@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-
-
 const Homepage = () => {
   const emailAddress = "leiladany16@gmail.com";
   const linkedinUrl = "https://www.linkedin.com/in/leila-teixeira";
@@ -56,29 +54,29 @@ const Homepage = () => {
         </div>
       </div>
       <div className="bigBox">
-      <div className="Projects" id="projects-section">
-      <h1>Projects</h1>
-  <div className="button-container">
-  <button className="hover-button">
-  <Link to="/games" className="button-projects">
-    <img src="/Images/gameicon.png" alt="Games" />
-    <p>Games</p>
-  </Link>
-</button>
-<button>
-  <Link to="/games" className="button-projects">
-    <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
-    <p>Online Agenda</p>
-  </Link>
-</button>
-<button>
-  <Link to="/games" className="button-projects">
-    <img src="/Images/blogicon.png" alt="Blog" />
-    <p>Blog</p>
-  </Link>
-</button>
-  </div>
-</div>
+        <div className="Projects" id="projects-section">
+          <h1>Projects</h1>
+          <div className="button-container">
+            <button className="hover-button">
+              <Link to="/games" className="button-projects">
+                <img src="/Images/gameicon.png" alt="Games" />
+                <p>Games</p>
+              </Link>
+            </button>
+            <button>
+              <Link to="/games" className="button-projects">
+                <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
+                <p>Online Agenda</p>
+              </Link>
+            </button>
+            <button>
+              <Link to="/games" className="button-projects">
+                <img src="/Images/blogicon.png" alt="Blog" />
+                <p>Blog</p>
+              </Link>
+            </button>
+          </div>
+        </div>
       </div>
       <div className="bigBox">
         <div className="Certifications" id="certifications-section">
@@ -95,41 +93,52 @@ const Homepage = () => {
       </div>
 
       {showModal && (
-  <div className="modal-overlay" onClick={(e) => e.target.classList.contains("close-button") && closeCertification()}>
-    <div className="modal">
-      {/* Close button */}
-      <button className="close-button" onClick={(e) => e.stopPropagation() || closeCertification()}>
-        &times;
-      </button>
-      {/* Certification content */}
-      <div className="certification-content">
-        <h2>{certifications[selectedCertification].name}</h2>
-        <img
-          src={certifications[selectedCertification].modalImage}
-          alt={certifications[selectedCertification].alt}
-        />
-      </div>
-    </div>
-  </div>
-)}
+        <div
+          className="modal-overlay"
+          onClick={(e) =>
+            e.target.classList.contains("close-button") && closeCertification()
+          }
+        >
+          <div className="modal">
+            {/* Close button */}
+            <button
+              className="close-button"
+              onClick={(e) => e.stopPropagation() || closeCertification()}
+            >
+              &times;
+            </button>
+            {/* Certification content */}
+            <div className="certification-content">
+              <h2>{certifications[selectedCertification].name}</h2>
+              <img
+                src={certifications[selectedCertification].modalImage}
+                alt={certifications[selectedCertification].alt}
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="bigBox">
         <div className="GetinTouch" id="get-in-touch-section">
           <h1>Get in Touch</h1>
           <div className="button-container">
-          <button>
-            <a href={`mailto:${emailAddress}`} className="button-getintouch">
-              
+            <button>
+              <a href={`mailto:${emailAddress}`} className="button-getintouch">
                 <img src="/Images/emailicon.png" alt="Email" />
                 <p>Email</p>
-            </a>
+              </a>
             </button>
             <button>
-            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="button-getintouch">
-              
+              <a
+                href={linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button-getintouch"
+              >
                 <img src="/Images/linkedinicon.png" alt="Linkedin" />
                 <p>LinkedIn</p>
-            </a>
+              </a>
             </button>
           </div>
         </div>

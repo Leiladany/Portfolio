@@ -1,4 +1,4 @@
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   return (
@@ -17,7 +17,7 @@ const Navbar = () => {
               offset={-230}
               duration={500}
             >
-              Home
+              My Services
             </ScrollLink>
           </li>
           <li className="nav-item">
