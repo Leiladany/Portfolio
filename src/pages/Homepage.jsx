@@ -66,7 +66,7 @@ const Homepage = () => {
             <button>
               <Link to="/games" className="button-projects">
                 <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
-                <p>Online Agenda</p>
+                <p>Onli Agenda</p>
               </Link>
             </button>
             <button>
