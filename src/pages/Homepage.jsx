@@ -64,13 +64,13 @@ const Homepage = () => {
               </Link>
             </button>
             <button>
-              <Link to="/games" className="button-projects">
+              <Link to="/onlineagenda" className="button-projects">
                 <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
-                <p>Onli Agenda</p>
+                <p>Online Agenda</p>
               </Link>
             </button>
             <button>
-              <Link to="/games" className="button-projects">
+              <Link to="/blog" className="button-projects">
                 <img src="/Images/blogicon.png" alt="Blog" />
                 <p>Blog</p>
               </Link>
