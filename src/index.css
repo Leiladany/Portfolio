@@ -23,7 +23,7 @@ body.hide-navbar .navbar {
   left: 350px;
   align-items: center;
   z-index: 1;
-  border: 6px double #000;
+  border: 3px solid #000;
 }
 
 .navbar-container {
@@ -121,6 +121,7 @@ h1 {
 }
 
 section {
+  border: 3px solid #232323;
   border-radius: 189.5px;
   background: #fce1e4;
   padding: 10px;
