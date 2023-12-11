@@ -20,7 +20,7 @@ body.hide-navbar .navbar {
   background: #fce1e4;
   position: fixed;
   top: 20px;
-  left: 350px;
+  left: 321px;
   align-items: center;
   z-index: 1;
   border: 3px solid #000;
@@ -126,8 +126,8 @@ section {
   background: #fce1e4;
   padding: 10px;
   margin: 30px;
-  width: 300px;
-  height: 300px;
+  width: 270px;
+  height: 270px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -141,7 +141,7 @@ section:hover {
 section p {
   display: none;
   position: absolute;
-  font-size: 40px;
+  font-size: 38px;
 }
 
 section:hover p {
@@ -157,7 +157,7 @@ section img {
 }
 
 button {
-  border: none;
+  border: 3px solid #000;
   border-radius: 189.5px;
   background: #fce1e4;
   padding: 10px;
