@@ -1,10 +1,21 @@
 body {
-  background-color: #e8dff5;
   margin: 0;
+  padding: 0;
+}
+
+.MyServices,
+.Projects,
+.Certifications,
+.GetinTouch {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 20px; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding in width calculation */
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Navbar */
@@ -14,14 +25,17 @@ body.hide-navbar .navbar {
 }
 
 .navbar {
-  width: 1057px;
-  height: 56px;
+  width: 60%;
+  height: 7%;
   border-radius: 50px;
-  background: #fce1e4;
+  background: none;
   position: fixed;
   top: 20px;
-  left: 321px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; /* Add display: flex */
   align-items: center;
+  justify-content: center; /* Center content horizontally */
   z-index: 1;
   border: 3px solid #000;
 }
@@ -29,20 +43,19 @@ body.hide-navbar .navbar {
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .nav-menu {
   list-style: none;
   display: flex;
+  padding: 0; /* Remove default padding on the ul element */
 }
 
 .nav-item {
-  margin-right: 100px;
+  margin: 0 35px; /* Adjust the spacing between items as needed */
   cursor: pointer;
 }
+
 
 .nav-links {
   color: #fff;
@@ -82,23 +95,60 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  margin-top: 13%;
+  height: 100vh; /* Ensure full viewport height */
+  margin: 0; /* Remove default margin */
 }
 
+
 .MyServices {
-  width: 80vw;
+  background-color: #e8dff5;
+}
+
+.MyServices h1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin-right: auto;
+  margin-left: 8vw;
+}
+
+.MyServices:hover h1 {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .Projects {
-  width: 80vw;
+  background-color: #dfc9ff;
 }
 
 .Projects h1 {
-  text-align: end;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin-right: 8vw;
+  margin-left: auto;
+}
+
+.Projects:hover h1 {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .Certifications {
-  width: 80vw;
+  background-color: #e8dff5;
+}
+
+.Certifications h1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin-left: 8vw;
+  margin-right: auto;
+}
+
+.Certifications:hover h1 {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .Certifications p {
@@ -106,12 +156,20 @@ h1 {
 }
 
 .GetinTouch {
-  width: 80vw;
-  margin-bottom: 120px;
+  background-color: #dfc9ff;
 }
 
 .GetinTouch h1 {
-  text-align: end;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin-right: 8vw;
+  margin-left: auto;
+}
+
+.GetinTouch:hover h1 {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .button-container {
@@ -120,78 +178,39 @@ h1 {
   margin-top: 20px;
 }
 
-section {
+section, button {
   border: 3px solid #232323;
-  border-radius: 189.5px;
+  border-radius: 50%;
   background: #fce1e4;
-  padding: 10px;
-  margin: 30px;
-  width: 270px;
-  height: 270px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-section:hover {
-  opacity: 0.5;
-}
-
-section p {
-  display: none;
-  position: absolute;
-  font-size: 38px;
-}
-
-section:hover p {
-  display: block !important;
-}
-
-section img {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  height: auto;
-  align-items: center;
-}
-
-button {
-  border: 3px solid #000;
-  border-radius: 189.5px;
-  background: #fce1e4;
-  padding: 10px;
-  margin: 30px;
-  width: 300px;
-  height: 300px;
+  margin: 20px;
+  width: 200px;
+  height: 200px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
-button:hover {
+section:hover, button:hover {
   opacity: 0.5;
 }
 
-button p {
+section p, button p {
   display: none;
   position: absolute;
   color: #232323;
   font-family: Capriola;
-  font-size: 45px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 25px;
 }
 
-button:hover p {
+section:hover p, button:hover p {
   display: block !important;
   opacity: 1 !important;
 }
 
-button img {
+section img, button img {
   display: flex;
   justify-content: center;
   width: 50%;

@@ -34,7 +34,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <div className="bigBox">
+      <div className="bigBox MyServices" id="my-services-section">
         <div className="MyServices" id="my-services-section">
           <h1>My Services</h1>
           <div className="button-container">
@@ -53,14 +53,14 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="bigBox">
+      <div className="bigBox Projects" id="projects-section">
         <div className="Projects" id="projects-section">
           <h1>Projects</h1>
           <div className="button-container">
-            <button className="hover-button">
+            <button>
               <Link to="/games" className="button-projects">
                 <img src="/Images/gameicon.png" alt="Games" />
-                <p>Games</p>
+                <p>Game</p>
               </Link>
             </button>
             <button>
@@ -78,7 +78,7 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="bigBox">
+      <div className="bigBox Certifications" id="certifications-section">
         <div className="Certifications" id="certifications-section">
           <h1>Certifications</h1>
           <div className="button-container">
@@ -119,7 +119,7 @@ const Homepage = () => {
         </div>
       )}
 
-      <div className="bigBox">
+      <div className="bigBox GetinTouch" id="get-in-touch-section">
         <div className="GetinTouch" id="get-in-touch-section">
           <h1>Get in Touch</h1>
           <div className="button-container">
