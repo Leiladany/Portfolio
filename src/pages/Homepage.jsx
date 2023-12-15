@@ -53,7 +53,7 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="bigBox Projects" id="projects-section">
+      <div className="bigBox Projects" id="projects-section1">
         <div className="Projects" id="projects-section">
           <h1>Projects</h1>
           <div className="button-container">
