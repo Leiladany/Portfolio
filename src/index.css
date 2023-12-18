@@ -1,8 +1,10 @@
+/* Reset */
 body {
   margin: 0;
   padding: 0;
 }
 
+/* Sections */
 .MyServices,
 .Projects,
 .Certifications,
@@ -10,17 +12,15 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  padding: 20px; /* Adjust padding as needed */
-  box-sizing: border-box; /* Include padding in width calculation */
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-
 /* Navbar */
-
 body.hide-navbar .navbar {
   display: none;
 }
@@ -34,9 +34,9 @@ body.hide-navbar .navbar {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex; /* Add display: flex */
+  display: flex;
   align-items: center;
-  justify-content: center; /* Center content horizontally */
+  justify-content: center;
   z-index: 1;
   border: 3px solid #000;
 }
@@ -49,38 +49,31 @@ body.hide-navbar .navbar {
 .nav-menu {
   list-style: none;
   display: flex;
-  padding: 0; /* Remove default padding on the ul element */
+  padding: 0;
 }
 
 .nav-item {
-  margin: 0 35px; /* Adjust the spacing between items as needed */
+  margin: 0 35px;
   cursor: pointer;
 }
 
-
-.nav-links {
+.nav-links,
+.navbar a {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
-}
-
-.navbar a {
-  color: #232323;
-  font-family: Capriola;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 
 a {
   font-weight: 500;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #000000;
 }
 
+/* Typography */
 h1 {
   line-height: 1.1;
   color: #232323;
@@ -90,17 +83,18 @@ h1 {
   font-weight: 400;
 }
 
+/* Big Boxes */
 .bigBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 105vh; /* Ensure full viewport height */
-  margin: 0; /* Remove default margin */
+  height: 105vh;
+  margin: 0;
 }
 
-
+/* MyServices */
 .MyServices {
   background-color: #e8dff5;
 }
@@ -118,6 +112,7 @@ h1 {
   transform: translateY(0);
 }
 
+/* Projects */
 .Projects {
   background-color: #dfc9ff;
 }
@@ -135,6 +130,7 @@ h1 {
   transform: translateY(0);
 }
 
+/* Certifications */
 .Certifications {
   background-color: #e8dff5;
 }
@@ -156,6 +152,7 @@ h1 {
   width: 16vw;
 }
 
+/* Get in Touch */
 .GetinTouch {
   background-color: #dfc9ff;
 }
@@ -173,13 +170,19 @@ h1 {
   transform: translateY(0);
 }
 
+/* Buttons and Images */
 .button-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-section, button {
+button {
+  cursor: pointer;
+}
+
+section,
+button {
   border: 3px solid #232323;
   border-radius: 50%;
   background: #fce1e4;
@@ -191,61 +194,56 @@ section, button {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
-button {
-  cursor: pointer;
-}
-
-section:hover, button:hover {
+section:hover,
+button:hover {
   opacity: 0.5;
 }
 
-section p, button p {
-  display: none;
-  position: absolute;
-  color: #232323;
-  font-family: Capriola;
-  font-size: 25px;
-}
-
-section:hover p, button:hover p {
-  display: block !important;
-  opacity: 1 !important;
-}
-
-section img, button img {
+section img,
+button img {
   display: flex;
   justify-content: center;
   width: 50%;
   height: auto;
   align-items: center;
+  transition: transform 0.5s ease-in-out;
 }
 
-.button-projects {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  border-radius: 38%; /* Make it round */
+.button-container button img,
+.section-container img {
+  transition: transform 0.5s ease-in-out;
 }
 
-.button-getintouch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  border-radius: 38%; /* Make it round */
+.button-container button:hover img,
+.section-container:hover img {
+  transform: rotate(360deg) scale(0);
 }
 
-.button-getintouch:hover {
-  opacity: 0.5;
+section p,
+button p {
+  display: none;
+  position: absolute;
+  color: #232323;
+  font-family: Capriola;
+  font-size: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
+section:hover p,
+button:hover p {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Modal */
 .close-button {
   width: 3px;
   height: 3px;
@@ -256,7 +254,7 @@ section img, button img {
   background: none;
   border: none;
   cursor: pointer;
-  color: #e8dff5; /* Set the color to red */
+  color: #e8dff5;
 }
 
 .modal-overlay {
@@ -265,15 +263,15 @@ section img, button img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Transparent black overlay */
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* Adjust z-index as needed */
+  z-index: 1000;
 }
 
 .modal {
-  background-color: transparent; /* Transparent background */
+  background-color: transparent;
   padding: 20px;
   border-radius: 10px;
   position: relative;
@@ -282,7 +280,7 @@ section img, button img {
 
 .certification-content {
   text-align: center;
-  color: white; /* Change color as needed */
+  color: white;
 }
 
 .certification-content h2 {
@@ -291,10 +289,11 @@ section img, button img {
 
 .certification-content img {
   max-width: 100%;
-  max-height: 80vh; /* Adjust max-height as needed */
+  max-height: 80vh;
   border-radius: 10px;
 }
 
+/* Intro Section */
 .intro {
   display: flex;
   flex-direction: column;
@@ -303,13 +302,13 @@ section img, button img {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%); /* Center the .intro horizontally */
-  text-align: center; /* Optional: Center align text within .intro */
-  height: 100vh; /* Set the height of the container to the full viewport height */
+  transform: translateX(-50%);
+  text-align: center;
+  height: 100vh;
 }
 
 .intro h1 {
-  margin-bottom: 20px; /* Optional: Add some spacing below the h1 */
+  margin-bottom: 20px;
 }
 
 .intro-button {
@@ -322,16 +321,17 @@ section img, button img {
   cursor: pointer;
 }
 
+/* Game Container */
 .game-container {
   margin: 0;
   overflow: hidden;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   position: relative;
   height: 100vh;
 }
 
 .game-container::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -340,12 +340,13 @@ section img, button img {
   z-index: -1;
   animation: starsAnimation 20s linear infinite;
   background: radial-gradient(#dfc9ff 2px, transparent 1px),
-              radial-gradient(#e8dff5 2px, transparent 1px);
+    radial-gradient(#e8dff5 2px, transparent 1px);
   background-position: 0 0, 25px 25px;
   background-size: 50px 50px;
 }
 
-.game-container {
+.game-container,
+.game-container:hover {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -353,6 +354,7 @@ section img, button img {
   border-color: 6px solid #dfc9ff;
 }
 
+/* Game */
 .game {
   position: relative;
   width: 300px;
@@ -370,6 +372,7 @@ section img, button img {
   height: 100%;
 }
 
+/* Game Info */
 .game-info {
   position: absolute;
   top: 0;
@@ -410,13 +413,38 @@ section img, button img {
   opacity: 1;
 }
 
-/* ... Your existing CSS ... */
+/* Button Container */
+.button-container button {
+  position: relative;
+  overflow: hidden;
+}
 
-/* ... Your existing CSS ... */
+.button-container button img,
+.section-container img {
+  transition: transform 0.5s ease-in-out;
+}
 
-/* ... Your existing CSS ... */
+.button-container button:hover img,
+.section-container:hover img {
+  transform: rotate(360deg) scale(0);
+}
 
+.button-container button p,
+.section-container p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
 
+.button-container button:hover p,
+.section-container:hover p {
+  opacity: 1;
+}
+
+/* Stars Animation */
 @keyframes starsAnimation {
   0% {
     background-position: 0 0, 25px 25px;
@@ -426,15 +454,17 @@ section img, button img {
   }
 }
 
-
+/* Light Mode */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
