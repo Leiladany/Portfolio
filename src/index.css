@@ -305,10 +305,12 @@ button:hover p {
   transform: translateX(-50%);
   text-align: center;
   height: 100vh;
+  font-size: 15px;
 }
 
 .intro h1 {
   margin-bottom: 20px;
+  font-size: 45px;
 }
 
 .intro-button {
@@ -317,8 +319,10 @@ button:hover p {
   text-align: center;
   width: 320px;
   height: auto;
-  border: 6px double #000;
+  border-radius: 50px;
+  border: 2px solid #000;
   cursor: pointer;
+  background-color: #dfc9ff;
 }
 
 /* Game Container */
