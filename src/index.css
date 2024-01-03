@@ -59,9 +59,9 @@ body.hide-navbar .navbar {
 
 .nav-links,
 .navbar a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 a {
@@ -327,11 +327,13 @@ button:hover p {
 
 /* Game Container */
 .game-container {
-  margin: 0;
-  overflow: hidden;
-  font-family: "Arial", sans-serif;
-  position: relative;
-  height: 100vh;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh; /* Set the height to 100vh to make it full height */
 }
 
 .game-container::before {
@@ -367,9 +369,30 @@ button:hover p {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  cursor: pointer;
   border: 6px solid #dfc9ff;
 }
+
+.try-me-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.try-me-button {
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #dfc9ff;
+  border: 2px solid #232323;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000;
+}
+
+.try-me-button:hover {
+  background-color: #e8dff5;
+}
+
 
 .game img {
   width: 100%;
@@ -397,6 +420,10 @@ button:hover p {
   overflow-y: auto;
 }
 
+strong {
+  color: purple;
+}
+
 .game-info::-webkit-scrollbar {
   width: 0;
 }
@@ -407,10 +434,9 @@ button:hover p {
 
 .game-info p {
   margin: 0;
-  margin-top: 120px;
+  margin-top: 20px;
   margin-bottom: 10px;
   font-size: 14px;
-  line-height: 1.4;
 }
 
 .game:hover .game-info {

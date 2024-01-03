@@ -1,4 +1,3 @@
-// Game.jsx
 import React from "react";
 
 const Game = () => {
@@ -9,24 +8,21 @@ const Game = () => {
         <div className="game-info">
           <h3>Escaping-Westview</h3>
           <p>
-            Step into the mesmerizing universe of 'Escaping Westview,' a 2D game
-            inspired by Marvel's 'WandaVision.' Your mission: dodge the
-            relentless spells cast by the cunning witch Agatha Harkness.
-            <br></br>
-            <br></br> Use your reflexes to maneuver up, down, and sideways,
-            navigating a visually stunning landscape reminiscent of the Disney+
-            series. <br></br> <br></br>Crafted with JavaScript (ES6), HTML,
-            Canvas, and CSS, this game seamlessly blends technology and magic.{" "}
-            <br></br>
-            <br></br>Your goal is simple yet challenging: avoid Agatha's spells
-            for as long as possible. The tension builds with each successful
-            dodge until you are inevitably hit, revealing your final spell
-            count. <br></br>
-            <br></br>Immerse yourself in 'Escaping Westview' and experience the
-            thrill of skillful evasion in a captivating, bite-sized gaming
-            adventure. How long can you outsmart Agatha's magic?
+            Step into 'Escaping Westview,' a 2D game inspired by Marvel's
+            'WandaVision'. <br></br> <br></br>Dodge spells from the cunning
+            witch Agatha Harkness. <br></br> <br></br>Use reflexes to navigate a
+            visually stunning landscape, crafted with{" "}
+            <strong>JavaScript</strong>, <strong>HTML</strong>,{" "}
+            <strong>Canvas</strong>, and <strong>CSS</strong>. <br></br>{" "}
+            <br></br>Your goal: avoid Agatha's spells for as long as possible.{" "}
+            <br></br> <br></br> How long can you outsmart Agatha's magic?
           </p>
         </div>
+      </div>
+      <div className="try-me-container">
+      <a href="https://leiladany.github.io/Escaping-Westview/" target="_blank" rel="noopener noreferrer" className="try-me-button">
+          Try Me
+        </a>
       </div>
     </div>
   );
