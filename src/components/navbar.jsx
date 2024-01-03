@@ -10,12 +10,17 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-
-      const myServicesOffset = document.getElementById("my-services-section").offsetTop;
-      const projectsOffset = document.getElementById("projects-section").offsetTop;
-      const certificationsOffset = document.getElementById("certifications-section").offsetTop;
-      const getInTouchOffset = document.getElementById("get-in-touch-section").offsetTop;
-
+  
+      const myServicesElement = document.getElementById("my-services-section");
+      const projectsElement = document.getElementById("projects-section");
+      const certificationsElement = document.getElementById("certifications-section");
+      const getInTouchElement = document.getElementById("get-in-touch-section");
+  
+      const myServicesOffset = myServicesElement ? myServicesElement.offsetTop : 0;
+      const projectsOffset = projectsElement ? projectsElement.offsetTop : 0;
+      const certificationsOffset = certificationsElement ? certificationsElement.offsetTop : 0;
+      const getInTouchOffset = getInTouchElement ? getInTouchElement.offsetTop : 0;
+  
       if (scrollPosition >= myServicesOffset && scrollPosition < projectsOffset) {
         setActiveSection("my-services-section");
       } else if (scrollPosition >= projectsOffset && scrollPosition < certificationsOffset) {
@@ -26,13 +31,13 @@ const Navbar = () => {
         setActiveSection("get-in-touch-section");
       }
     };
-
+  
     window.addEventListener("scroll", handleScroll);
-
+  
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []);  
 
   const scrollToSection = (sectionId) => {
     scroll.scrollTo(document.getElementById(sectionId).offsetTop, {
@@ -51,10 +56,11 @@ const Navbar = () => {
         </div>
 
         <ul className="nav-menu">
-          {location.pathname === "/games" ? (
+          {location.pathname === "/games"|| location.pathname === "/onlineagenda" || location.pathname === "/blog" ? (
             <li className="nav-item">
               <RouterLink to="/homepage">Go back to Homepage</RouterLink>
             </li>
+            
           ) : (
             <>
               <li className={`nav-item ${activeSection === "my-services-section" ? "active" : ""}`}>
