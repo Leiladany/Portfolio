@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import webdevicon1 from "../assets/Images/wdeicon.png";
-import wdicon1 from "../assets/Images/wdeicon.png";
+import wdicon1 from "../assets/Images/wdicon.png";
 import veicon1 from "../assets/Images/veicon.png";
 import gamesicon1 from "../assets/Images/gameicon.png";
 import onagicon1 from "../assets/Images/onagnicon.png";
