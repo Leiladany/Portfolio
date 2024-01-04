@@ -13,7 +13,7 @@ const Game = () => {
   return (
     <div className="game-container">
       <div className="game">
-        <img src="/public/Images/game-img1.png" alt="Game 1" />
+        <img src="/src/assets/Images/game-img1.png" alt="Game 1" />
         <div className="game-info">
           <h3>Escaping-Westview</h3>
           <p>
