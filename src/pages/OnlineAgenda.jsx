@@ -13,7 +13,7 @@ const OnlineAgenda = () => {
   return (
     <div className="onagenda-container">
       <div className="onagenda">
-        <img src="/public/Images/onagenda-img1.png" alt="Online Agenda" />
+        <img src="../assets/Images/onagenda-img1.png" alt="Online Agenda" />
         <div className="onagenda-info">
           <h3>Pawsitive Pets</h3>
           <p>

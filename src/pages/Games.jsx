@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import gameimg1 from "../assets/Images/game-img1.png"
 
 const Game = () => {
   useEffect(() => {
@@ -13,7 +14,7 @@ const Game = () => {
   return (
     <div className="game-container">
       <div className="game">
-        <img src="/src/assets/Images/game-img1.png" alt="Game 1" />
+        <img src={gameimg1} alt="Game 1" />
         <div className="game-info">
           <h3>Escaping-Westview</h3>
           <p>
