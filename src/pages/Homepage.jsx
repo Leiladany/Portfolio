@@ -1,5 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import webdevicon1 from "../assets/Images/wdeicon.png";
+import wdicon1 from "../assets/Images/wdeicon.png";
+import veicon1 from "../assets/Images/veicon.png";
+import gamesicon1 from "../assets/Images/gameicon.png";
+import onagicon1 from "../assets/Images/onagnicon.png";
+import blogicon1 from "../assets/Images/blogicon.png";
+import emailicon1 from "../assets/Images/emailicon.png";
+import linkicon1 from "../assets/Images/linkedinicon.png";
+import ldsicon1 from "../assets/Images/LSD.png";
+import ironhicon1 from "../assets/Images/ironhackicon.png";
+
+
 
 const Homepage = () => {
   const emailAddress = "leiladany16@gmail.com";
@@ -8,13 +20,13 @@ const Homepage = () => {
   const certifications = [
     {
       name: "Lisbon School of Design",
-      image: "/Images/LSD.png",
+      image: ldsicon1,
       alt: "LSD",
       modalImage: "/Images/LSDCert.png",
     },
     {
       name: "Ironhack",
-      image: "/Images/ironhackicon.png",
+      image: ironhicon1,
       alt: "Ironhack",
       modalImage: "/Images/ironhackCert.png",
     },
@@ -39,15 +51,15 @@ const Homepage = () => {
           <h1>My Services</h1>
           <div className="button-container">
             <section>
-              <img src="/Images/wdicon.png" alt="Web Development" />
+              <img src={webdevicon1} alt="Web Development" />
               <p>Web Development</p>
             </section>
             <section>
-              <img src="/Images/wdeicon.png" alt="Web Design" />
+              <img src={wdicon1} alt="Web Design" />
               <p>Web Design</p>
             </section>
             <section>
-              <img src="/Images/veicon.png" alt="Video Editing" />
+              <img src={veicon1} alt="Video Editing" />
               <p>Video Editing</p>
             </section>
           </div>
@@ -59,19 +71,19 @@ const Homepage = () => {
           <div className="button-container">
             <button>
               <Link to="/games" className="button-projects">
-                <img src="/Images/gameicon.png" alt="Games" />
+                <img src={gamesicon1} alt="Games" />
                 <p>Game</p>
               </Link>
             </button>
             <button>
               <Link to="/onlineagenda" className="button-projects">
-                <img src="/Images/onagnicon.png" alt="OnlineAgenda" />
+                <img src={onagicon1} alt="OnlineAgenda" />
                 <p>Online Agenda</p>
               </Link>
             </button>
             <button>
               <Link to="/blog" className="button-projects">
-                <img src="/Images/blogicon.png" alt="Blog" />
+                <img src={blogicon1} alt="Blog" />
                 <p>Blog</p>
               </Link>
             </button>
@@ -125,7 +137,7 @@ const Homepage = () => {
           <div className="button-container">
             <button>
               <a href={`mailto:${emailAddress}`} className="button-getintouch">
-                <img src="/Images/emailicon.png" alt="Email" />
+                <img src={emailicon1} alt="Email" />
                 <p>Email</p>
               </a>
             </button>
@@ -136,7 +148,7 @@ const Homepage = () => {
                 rel="noopener noreferrer"
                 className="button-getintouch"
               >
-                <img src="/Images/linkedinicon.png" alt="Linkedin" />
+                <img src={linkicon1} alt="Linkedin" />
                 <p>LinkedIn</p>
               </a>
             </button>
