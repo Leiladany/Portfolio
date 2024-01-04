@@ -1,14 +1,34 @@
-import React from "react";
+import { useEffect } from "react";
 
 const OnlineAgenda = () => {
+  useEffect(() => {
+    document.body.classList.add("game-page");
+
+    // Remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove("game-page");
+    };
+  }, []);
+
   return (
-    <div className="game-container">
-      <div className="game">
+    <div className="onagenda-container">
+      <div className="onagenda">
         <img src="/public/Images/onagenda-img1.png" alt="Online Agenda" />
-        <div className="game-info">
+        <div className="onagenda-info">
           <h3>Pawsitive Pets</h3>
           <p>
-          Discover "PawsitivePets," a sleek website tailored for pet lovers.<br></br><br></br> Crafted with <strong>JavaScript (ES6)</strong>, <strong>Express.Js</strong>, <strong>Node.Js</strong>, and backed by a reliable <strong>MongoDB</strong> database, it offers a secure haven for your pet's information. <br></br><br></br>With an aesthetically pleasing interface using <strong>HTML</strong> and <strong>CSS</strong>, PawsitivePets ensures an enjoyable experience. The integration of a robust <strong>JSON API</strong> facilitates timely reminders for pet appointments.<br></br><br></br>Explore PawsitivePets, where pet care meets simplicity.
+            Discover "PawsitivePets," a sleek website tailored for pet lovers.
+            <br></br>
+            <br></br> Crafted with <strong>JavaScript (ES6)</strong>,{" "}
+            <strong>Express.Js</strong>, <strong>Node.Js</strong>, and backed by
+            a reliable <strong>MongoDB</strong> database, it offers a secure
+            haven for your pet's information. <br></br>
+            <br></br>With an aesthetically pleasing interface using{" "}
+            <strong>HTML</strong> and <strong>CSS</strong>, PawsitivePets
+            ensures an enjoyable experience. The integration of a robust{" "}
+            <strong>JSON API</strong> facilitates timely reminders for pet
+            appointments.<br></br>
+            <br></br>Explore PawsitivePets, where pet care meets simplicity.
           </p>
         </div>
       </div>

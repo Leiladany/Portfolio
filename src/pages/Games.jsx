@@ -1,6 +1,15 @@
-import React from "react";
+import { useEffect } from "react";
 
 const Game = () => {
+  useEffect(() => {
+    document.body.classList.add("game-page");
+
+    // Remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove("game-page");
+    };
+  }, []);
+
   return (
     <div className="game-container">
       <div className="game">
@@ -20,7 +29,12 @@ const Game = () => {
         </div>
       </div>
       <div className="try-me-container">
-      <a href="https://leiladany.github.io/Escaping-Westview/" target="_blank" rel="noopener noreferrer" className="try-me-button">
+        <a
+          href="https://leiladany.github.io/Escaping-Westview/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="try-me-button"
+        >
           Try Me
         </a>
       </div>
