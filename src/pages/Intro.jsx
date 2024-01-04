@@ -12,7 +12,7 @@ const Intro = () => {
   }, []);
 
   const handleClick = () => {
-    window.location.href = "/Homepage";
+    window.location.href = "/homepage";
   };
 
   return (
