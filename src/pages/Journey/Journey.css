@@ -1,0 +1,98 @@
+.Journey {
+  background-color: #e8dff5;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.Journey h1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin-left: 4vw;
+  margin-top: 10px;
+  margin-right: auto;
+}
+
+.Journey:hover h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline {
+  position: relative;
+  top: 150px;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.events {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Grouping event classes */
+.event-school,
+.event-acpp,
+.event-ironhack,
+.event-udemy2 {
+  position: relative;
+  top: -64px;
+}
+
+.event-school2,
+.event-lsd,
+.event-udemy1,
+.event-udemy3 {
+  position: relative;
+  top: 64px;
+}
+
+/* Combining event date classes */
+.event-date1,
+.event-date2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  width: max-content;
+}
+
+/* Individual event date adjustments */
+.event-date1 {
+  margin-bottom: 100px;
+}
+
+.event-date2 {
+  margin-top: -30px;
+}
+
+/* Event description styles */
+.event-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .Journey h1 {
+    margin-left: 10px;
+  }
+
+  .timeline {
+    top: 100px;
+  }
+}

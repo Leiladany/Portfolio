@@ -1,0 +1,139 @@
+.Projects {
+  background-color: #dfc9ff;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.Projects h1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin-left: 4vw;
+  margin-top: 20px;
+  margin-right: auto;
+}
+
+.Projects:hover h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.teste {
+  display: flex;
+  margin: 40px;
+}
+
+.Project-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 268px;
+  margin: 0 8px;
+  height: 380px; /* Set a fixed height */
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 15px;
+  border: black solid 3px;
+  padding: 10px;
+}
+
+.Project-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Project-cover {
+  width: 200px;
+  height: 90px;
+  object-fit: cover;
+  border: black solid 3px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.Project-title {
+  width: fit-content;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.Project-desc {
+  max-width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  text-align: justify;
+  height: 70px;
+}
+
+.Project-lang {
+  max-width: fit-content;
+  font-size: 10px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+ul {
+  display: flex;
+  padding-left: 0;
+}
+
+li {
+  padding: 5px;
+  margin: 2px;
+  list-style: none;
+  border-radius: 10px;
+  background-color: #dfc9ff;
+  color: white;
+}
+
+.Project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.Project-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  border: black solid 2px;
+  background-color: white;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.Project-button:hover {
+  background-color: #dfc9ff;
+}
+
+.Project-buttons a {
+  font-size: 13px;
+  padding: 3px;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .teste {
+    margin: 20px 10px;
+  }
+
+  .Project-box {
+    width: 90%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .Project-cover {
+    max-width: 100%;
+  }
+
+  .Project-desc {
+    height: auto;
+  }
+}
