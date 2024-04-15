@@ -1,7 +1,7 @@
 import { MdAlternateEmail } from "react-icons/md";
 import { CiLinkedin } from "react-icons/ci";
 import { FaGithubSquare } from "react-icons/fa";
-import "./SocialMedia.css";
+import "./Socialmedia.css";
 
 const SocialMedia = () => {
   const emailAddress = "leiladany16@gmail.com";
