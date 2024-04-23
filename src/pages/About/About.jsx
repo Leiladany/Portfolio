@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div>
       <div className="bigBox About" id="about-section">
-        <div className="About" id="about-section">
+        <div className="AboutText">
           <h1>About</h1>
           <h2>Hellooo Everyone! My name is Leila Teixeira</h2>
           <h3>
